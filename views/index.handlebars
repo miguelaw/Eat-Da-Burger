@@ -1,0 +1,51 @@
+<header>
+    <div class="col-md-12 text-center">
+        <h1>Miguel's Burger Shop!</h1><br>
+    </div>
+</header>
+
+<div id="container">
+
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 text-center">
+            <img src="/assets/images/the-holy-cow.jpg" width="200px" id="burger"><br>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 text-center">
+            <h2>Create your Own!</h2>
+            <form action="/api/burgers" method="POST">
+                <input type="text" id="name" name="burger_name" placeholder="MMmMmm... Burger">
+                <button type="submit" class="btn btn-danger" id="submit">SUBMIT</button>
+            </form> <br>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6 text-center" id="burgerAvail">
+            <h2>Eat Da Burger</h2>
+            {{#each burgers}} {{#unless this.devoured}}
+            <div>
+                <form action="/api/burgers/{{this.id}}?_method=PUT" method="POST">
+                    <button type="submit" class='burger-Available'> {{this.burger_name}}</button>
+                </form>
+            </div>
+            {{/unless}} {{/each}}
+        </div>
+        <div class="col-sm-6 text-center" id="burgerEat">
+            <h2>Eaten Burgers</h2>
+            {{#each burgers}} {{#if this.devoured}}
+            <div class='burger-Eaten'>
+                <div>
+                    {{this.burger_name}}
+                </div>
+            </div>
+            {{/if}} {{/each}}
+        </div>
+    </div>
+
+</div>
