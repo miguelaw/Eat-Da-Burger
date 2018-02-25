@@ -9,7 +9,7 @@ The user enters the name of a burger to add it to the menut (this also adds the 
 
 ## Demo
 
-The demo of the burger eating application can be found [here]().
+The demo of the burger eating application can be found [here](https://eat-da-burger-mw.herokuapp.com/).
 
 ## Installation
 
