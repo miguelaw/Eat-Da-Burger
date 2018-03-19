@@ -7,6 +7,12 @@ This application demonstrates a simple full stack application with a front end i
 
 The user enters the name of a burger to add it to the menut (this also adds the new burger entry into the MySQL database). The burger entry is added as *available* on the menu and placed on the left side of the screen. The user then eats any burger by clicking on it, which moves it into the adjacent column and updates its status to the database.
 
+<img src="./public/assets/images/1.jpg" alt="Burger App" height="600">
+
+<img src="./public/assets/images/2.jpg" alt="Burger App" height="600">
+
+<img src="./public/assets/images/3.jpg" alt="Burger App" height="600">
+
 ## Demo
 
 The demo of the burger eating application can be found [here](https://eat-da-burger-mw.herokuapp.com/).
